@@ -21,45 +21,38 @@
 			<div class="col-sm-5 well">
 				<table  class="table table-striped table-hover">
 				<tbody>
-	    <tr>
+	    <tr ng-click="showMsg(1)">
 	      <td>1</td>
-	      <td>Column content</td>
-	      <td>Column content</td>
-	      <td>Column content</td>
+	      <td>SSE Lab</td>
 	    </tr>
 	    <tr>
 	      <td>2</td>
-	      <td>Column content</td>
-	      <td>Column content</td>
 	      <td>Column content</td>
 	    </tr>
 	    <tr>
 	      <td>3</td>
 	      <td>Column content</td>
-	      <td>Column content</td>
-	      <td>Column content</td>
 	    </tr>
 	    <tr>
 	      <td>4</td>
 	      <td>Column content</td>
-	      <td>Column content</td>
-	      <td>Column content</td>
 	    </tr>
-	    <tr>
+	    <tr ng-click="showMsg(4)">
 	      <td>5</td>
-	      <td>Column content</td>
-	      <td>Column content</td>
 	      <td>Column content</td>
 	    </tr>
 	    <tr>
 	      <td>6</td>
 	      <td>Column content</td>
-	      <td>Column content</td>
-	      <td>Column content</td>
 	    </tr>
 				</table>
 			</div>
 			<div class="col-sm-5 col-sm-offset-2 well">
+				<!--Database get of information related to the column clicked on the other side -->
+				<p ng-hide="show">Click on an entry to the Left to get details!</p>
+				<p ng-show="show">{{details.desc}}</p>
+				<p style="text-align:center" ng-show="show">Official Hours:</p>
+				<p style="text-align:center" ng-show="show">{{details.hours}}</p>
 			</div>
 		</div>
 	</body>
